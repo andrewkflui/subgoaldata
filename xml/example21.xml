@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Dosage Calculator</title>
+  <program>
+dosage = 3          
+age = int(input("Enter your age: "))
+
+if (age <= 12) :    
+    dosage = 1
+
+print("The dosage is", dosage, "tablet(s)")
+
+  </program>
+  <description>Find the dosage based on input age using one-way selection.  An one-way selection has a default condition (normal dosage) and a special condition (child dosage)</description>
+  <topics>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-4</position>
+      <description>Set a special dosage if the age in child range</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>This code block, defined by aligned indentation, is executed if the condition is true</description>
+    </explain>
+    <explain>
+      <position>3-4</position>
+      <description>An one-way if structure that execute conditionally</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>The condition, which may be true or false, determines the execution of a block of code</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>This code is always executed</description>
+    </explain>
+    <explain>
+      <position>0-1</position>
+      <description>This code is always executed</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>Set default or normal dosage for everyone</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>Set dosage for child</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Special dosage if child</label>
+      <position>3-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Executed if true condition</label>
+      <position>4-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure</label>
+      <position>3-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The condition</label>
+      <position>3-3</position>
+      <colrange>3-14</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After selection structure</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before selection structure</label>
+      <position>0-1</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Default dosage</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Child dosage</label>
+      <position>4-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Data Processing</title>
+  <program>
+inches = input("Enter length in inches: ")
+cm = float(inches) * 2.54
+print("Same length is {0} cm".format(cm))
+  </program>
+  <description>Convert inches to centimeters</description>
+  <topics>
+    <topic>data processing</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>1-1</position>
+      <description>Convert String to Number</description>
+    </explain>
+    <explain>
+      <position>1-1</position>
+      <description>Store result of calculation to a variable</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation</label>
+      <position>1-1</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Data processing pattern</label>
+      <position>0-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>1-1</position>
+      <colrange>5-18</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Multiply operation</label>
+      <position>1-1</position>
+      <colrange>5-25</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Store to variable</label>
+      <position>1-1</position>
+      <colrange>0-25</colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

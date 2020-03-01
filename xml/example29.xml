@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Bonus Calculation</title>
+  <program>
+sales = int(input("Enter sales: "))
+staff = input("Enter staff type [C]ontract or [F]ulltime: ")
+
+bonus = 0  # assume bonus is 0
+
+if staff == 'F' :
+    if sales >= 5000 and sales < 10000 :
+        bonus = sales * 0.05
+    elif sales >= 10000 :
+        bonus = sales * 0.08
+    print("The commission amount is $", bonus)
+elif staff == 'C' :
+    bonus = sales * 0.16
+    print("The commission amount is $", bonus)
+else :
+    print("Wrong Staff Type")
+
+print("The commission amount is $", bonus)
+
+  </program>
+  <description>Bonus calculation based on the staff types (fulltime or contract) and sales amount, with input error validation</description>
+  <topics>
+    <topic>data processing</topic>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-14</position>
+      <description>Several bonus calculation rules are included in the calculation</description>
+    </explain>
+    <explain>
+      <position>5-15</position>
+      <description>Three possible paths in this structure, the if part, the elif part and the else part</description>
+    </explain>
+    <explain>
+      <position>6-10</position>
+      <description>Three possible paths in this structure, the if part, the elif part and skipped the whole structure</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-1</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation</label>
+      <position>3-14</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>17-17</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Bonus calculation for fulltime</label>
+      <position>6-10</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Bonus calculation for contract</label>
+      <position>12-13</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Fulltime with sales btw $5000 and $10000</label>
+      <position>7-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Fulltime with sales > $10000</label>
+      <position>9-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Handle invalid staff type</label>
+      <position>15-15</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (multi-way)</label>
+      <position>5-15</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (multi-way)</label>
+      <position>6-10</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

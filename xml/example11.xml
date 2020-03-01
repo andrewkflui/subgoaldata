@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Data Processing</title>
+  <program>
+print("Cylinder Volume Calculator")
+radius = input("Enter the radius of the base of cylinder (cm): ")
+radius = float(radius)
+height = input("Enter the height of cylinder (cm): ")
+height = float(height)
+
+volume = 3.14159 * radius * radius * height
+
+print("Volume of the cylinder = ", volume, "cubic cm")
+
+
+  </program>
+  <description>Find volume of a cylinder from base radius and height</description>
+  <topics>
+    <topic>data processing</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>2-2</position>
+      <description>Convert String to Number</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>Convert String to Number</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>1-1</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>8-8</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Data processing pattern</label>
+      <position>0-8</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>2-2</position>
+      <colrange>9-55</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>3-3</position>
+      <colrange>9-55</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>4-4</position>
+      <colrange>9-55</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>3-3</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Dosage Calculator</title>
+  <program>
+age = int(input("Enter your age: "))
+
+if age <= 12 : 
+    dosage = 1  # execute this if True
+else
+    dosage = 3  # execute this if False
+
+print("The dosage is", dosage, "tablet(s)")
+
+  </program>
+  <description>Find the dosage based on input age using one-way selection.  An one-way selection has a default condition (normal dosage) and a special condition (child dosage)</description>
+  <topics>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-3</position>
+      <description>This code block, in the if part, is executed if the condition is true</description>
+    </explain>
+    <explain>
+      <position>2-5</position>
+      <description>An two-way if structure that execute conditionally</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The condition, which may be true or false, determines the execution of a block of code</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>This code is always executed</description>
+    </explain>
+    <explain>
+      <position>0-1</position>
+      <description>This code is always executed</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>Set dosage for adult</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>Set dosage for child</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>This code block, in the else part, is executed if the condition is false</description>
+    </explain>
+    <explain>
+      <position>2-5</position>
+      <description>Determine one of the two dosage according to the age</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Executed if true condition</label>
+      <position>3-3</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure</label>
+      <position>2-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The condition</label>
+      <position>2-2</position>
+      <colrange>3-12</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After selection structure</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before selection structure</label>
+      <position>0-1</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Adult dosage</label>
+      <position>5-5</position>
+      <colrange>0-39</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Child dosage</label>
+      <position>3-3</position>
+      <colrange>0-38</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Executed if false condition</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Determine child or adult dosage</label>
+      <position>2-5</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

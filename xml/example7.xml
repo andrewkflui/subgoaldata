@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Data Processing</title>
+  <program>
+num = input("Enter a number: ")  
+num = int(num)                  
+
+square = num * num
+print("The square of the number is", square)
+  </program>
+  <description>Find square of an integer</description>
+  <topics>
+    <topic>data processing</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>1-1</position>
+      <description>Convert String to an integer</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>Store result of calculation to a variable</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation</label>
+      <position>3-3</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>4-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Data processing pattern</label>
+      <position>0-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>1-1</position>
+      <colrange>6-15</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Multiply operation</label>
+      <position>3-3</position>
+      <colrange>9-18</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Store to variable</label>
+      <position>3-3</position>
+      <colrange>0-18</colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

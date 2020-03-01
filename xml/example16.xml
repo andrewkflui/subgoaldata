@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Data Processing</title>
+  <program>
+import math
+
+z = float(input("Enter aerial distance (m): "))
+theta = float(input("Enter angle of location B from A (in degrees): "))
+
+theta = math.radians(theta)  # convert from degrees to radians
+x = z * math.cos(theta)
+y = z * math.sin(theta)
+
+print("Distance to walk is ", x + y, "m")
+
+
+  </program>
+  <description>FInd manhatten distance given aerial distance and angle</description>
+  <topics>
+    <topic>data processing</topic>
+    <topic>import</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>0-0</position>
+      <description>Functions in the math module can be used</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>Call function from an import module, with math is the module name and radians is the function name</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>Call function from an import module, with math is the module name and cos is the function name</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>Call function from an import module, with math is the module name and sin is the function name</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>2-3</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation</label>
+      <position>5-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>9-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Data processing pattern</label>
+      <position>2-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Import module</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Function of import module</label>
+      <position>5-5</position>
+      <colrange>8-27</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Function of import module</label>
+      <position>6-6</position>
+      <colrange>8-23</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Function of import module</label>
+      <position>7-7</position>
+      <colrange>8-23</colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

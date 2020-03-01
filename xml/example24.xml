@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Cost of Buying Dumplings</title>
+  <program>
+dum = int(input("Enter the number of dumplings to buy: "))
+
+amount = 2.5 * dum
+
+if dum > 20:
+    amount = amount - 0.5 * (dum - 20)
+
+print("Amount to pay is $", amount)
+
+  </program>
+  <description>Find the cost of buying dumplings, each of which normally sold at $2.5 and those more than the initial 20 sold at $2.0 a discount price</description>
+  <topics>
+    <topic>data processing</topic>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-4</position>
+      <description>Calculate discounted cost for over 20 dumplings</description>
+    </explain>
+    <explain>
+      <position>4-5</position>
+      <description>An one-way if structure that execute conditionally</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>Discount price applied for more than 20 dumplings</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>Discounted cost calculation based on $2.0 each after initial 20 dumplings</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>Set a special dosage if the age in elderly range</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Discount if buying more than 20</label>
+      <position>3-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure</label>
+      <position>4-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Condition for discount cost</label>
+      <position>4-4</position>
+      <colrange>3-11</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Default cost calculation</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Discount cost calculation</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

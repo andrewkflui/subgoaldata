@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Find the Kth power of an integer</title>
+  <program>
+print("Kth Power of N Calculator")
+
+N = int(input("Enter number N: "))
+K = int(input("Enter number K: "))
+
+answer = 1        # initialized to 1 because of the multiplication
+count = 1
+while count <= K:
+    answer *= N         # answer = answer * N
+    count += 1
+
+print("Power {} of {} is {}".format(K, N, answer))
+  </program>
+  <description>Find the Kth power of an integer, both are from input.</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>data processing</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>8-9</position>
+      <description>Code block, aligned by indentation, is to be executed (again) if the condition remains true.  If the condition is false, the execution will stop and leave the structure</description>
+    </explain>
+    <explain>
+      <position>11-11</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>0-6</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>The counter (variable count) is initilized with 0, and will run 0, 1all the way to N</description>
+    </explain>
+    <explain>
+      <position>9-9</position>
+      <description>The counter is updated as the repetition is done once</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>The counter is checked if the repetition should continue or stop</description>
+    </explain>
+    <explain>
+      <position>6-9</position>
+      <description>Counted-controlled loop repeats according to a counter</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>The answer should be the product of N x N x ... x N where there are K terms of N</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>One of the multiplication of N x N x ... x N</description>
+    </explain>
+    <explain>
+      <position>5-9</position>
+      <description>Calculate the factorial of N with a loop</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>7-9</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute again if true condition</label>
+      <position>8-9</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After repetition structure</label>
+      <position>11-11</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before repetition structure</label>
+      <position>0-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Initialize counter</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update counter</label>
+      <position>9-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Check counter</label>
+      <position>7-7</position>
+      <colrange>6-16</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>2-3</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Counter-controlled loop</label>
+      <position>6-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Initialize answer</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Multiply N to answer</label>
+      <position>7-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>11-11</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculate</label>
+      <position>5-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

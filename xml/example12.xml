@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Data Processing</title>
+  <program>
+import math
+
+fare = float(input("Enter original bus fare: "))
+
+halfFare = math.floor((fare / 2) * 10 + 0.5) / 10
+print("Half fare is $", halfFare) 
+  </program>
+  <description>FInd half fare rounding to the nearest 10 cents</description>
+  <topics>
+    <topic>data processing</topic>
+    <topic>import</topic>
+    <topic>operator</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>2-2</position>
+      <description>Convert String to Number</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>Functions in the math module can be used</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>Call function from an import module, with math is the module name and floor is the function name</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>The floor function can round whole numbers. The amount is multiplied 10 times to make ten-cents into dollars (whole numbers) first.</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>Round to the nearest integer by adding 0.5 and then remove the fractions with math.floor</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>Scale down the amount to the original</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation</label>
+      <position>4-4</position>
+      <colrange>11-49</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Data processing pattern</label>
+      <position>2-5</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>2-2</position>
+      <colrange>7-48</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Import module</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Function of import module</label>
+      <position>4-4</position>
+      <colrange>11-21</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation Step 1</label>
+      <position>4-4</position>
+      <colrange>22-32</colrange>
+      <type>_evaluation</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation Step 2</label>
+      <position>4-4</position>
+      <colrange>22-37</colrange>
+      <type>_evaluation</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation Step 3</label>
+      <position>4-4</position>
+      <colrange>11-44</colrange>
+      <type>_evaluation</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation Step 4</label>
+      <position>4-4</position>
+      <colrange>11-49</colrange>
+      <type>_evaluation</type>
+    </subgoal>
+    <subgoal>
+      <label>Scale up ten times</label>
+      <position>4-4</position>
+      <colrange>22-37</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Round to nearest integer</label>
+      <position>4-4</position>
+      <colrange>11-44</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Scale down ten times</label>
+      <position>4-4</position>
+      <colrange>11-49</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

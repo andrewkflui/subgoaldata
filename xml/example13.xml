@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Data Processing</title>
+  <program>
+from math import sqrt
+
+number = float(input("Enter a number:"))
+result = sqrt(number)
+print("The square root of", number, "is", result)
+  </program>
+  <description>FInd squre root of a number</description>
+  <topics>
+    <topic>data processing</topic>
+    <topic>import</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>2-2</position>
+      <description>Convert String to Number</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>The sqrt function in the math module can be used</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>Call function from an import module, the name sqrt is already made known in the import statement</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation</label>
+      <position>3-3</position>
+      <colrange>11-49</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>4-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Data processing pattern</label>
+      <position>2-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>2-2</position>
+      <colrange>9-40</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Import function from module</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Function of import module</label>
+      <position>3-3</position>
+      <colrange>9-13</colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

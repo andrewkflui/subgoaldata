@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Interest Calculator</title>
+  <program>
+amount = float(input("Enter the deposit amount (HK$): "))
+
+if amount >= 100000:
+    rate = 0.5  # percentage
+else:
+    rate = 0.1  # percentage
+
+print("Amount of interest earned in 1 year = HK$", amount * rate / 100)
+
+  </program>
+  <description>Calculate the interest based on variable rate depending on the deposit amoiunt</description>
+  <topics>
+    <topic>data processing</topic>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-3</position>
+      <description>This code block, in the if part, is executed if the condition is true</description>
+    </explain>
+    <explain>
+      <position>2-5</position>
+      <description>An two-way if structure that execute conditionally</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The condition, which may be true or false, determines the execution of a block of code</description>
+    </explain>
+    <explain>
+      <position>7-8</position>
+      <description>This code is always executed</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>This code is always executed</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>This code block, in the else part, is executed if the condition is false</description>
+    </explain>
+    <explain>
+      <position>2-5</position>
+      <description>Determine one of the rates depending on the deposit</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>Calculation takes place at the same time as output data</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Executed if true condition</label>
+      <position>3-3</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (2-way)</label>
+      <position>2-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The condition</label>
+      <position>2-2</position>
+      <colrange>3-19</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After selection structure</label>
+      <position>7-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before selection structure</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Higher rate for larger deposit</label>
+      <position>3-3</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Lower rate for smaller deposit</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Executed if false condition</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Determine the rate</label>
+      <position>2-5</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculate and output data</label>
+      <position>7-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

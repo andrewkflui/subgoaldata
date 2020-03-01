@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Data Processing</title>
+  <program>
+print("Round-base Cylinder Surface Area Calculator")
+
+radius = float(input("Enter radius of the base (m): "))
+height = float(input("Enter height of cylinder (m): "))
+
+pi = 3.14159
+toparea = pi * radius * radius
+bottomarea = toparea
+middlearea = height * 2 * pi * radius
+answer = toparea + bottomarea + middlearea
+
+print("The surface area is", answer, "meters square")
+  </program>
+  <description>Find surface area of a cylinder from base radius and height</description>
+  <topics>
+    <topic>data processing</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>2-2</position>
+      <description>Convert String to Number</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>Prints a welcome message</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>2-3</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation</label>
+      <position>5-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>11-11</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Data processing pattern</label>
+      <position>2-11</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>2-2</position>
+      <colrange>9-55</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Welcome message</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>3-3</position>
+      <colrange>9-55</colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

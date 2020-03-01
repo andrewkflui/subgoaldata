@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Find minimum and maximum from input</title>
+  <program>
+print("Enter 10 integers")
+
+largest = smallest = None
+
+count = 1
+
+while count <= 10:
+    num = float(input("Enter number #{}: ".format(count)))
+    if largest == None or num > largest :
+        largest = num
+    if smallest == None or num < smallest :
+        smallest = num
+    count = count + 1
+
+print("The largest is {} and the smallest is {}".format(largest, smallest))
+
+  </program>
+  <description>Find the minimum and maximum from 10 input numbers</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>7-12</position>
+      <description>Code block, aligned by indentation, is to be executed (again) if the condition remains true.  If the condition is false, the execution will stop and leave the structure</description>
+    </explain>
+    <explain>
+      <position>14-14</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>0-4</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>The counter (variable num) is initilized with the input number, and it is also used to track of the number of repetitions</description>
+    </explain>
+    <explain>
+      <position>12-12</position>
+      <description>The counter is updated as the repetition is done once</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>The counter is checked if the repetition should continue or stop</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>The input data is inside the loop and repeat 10 times, each time reads in one number</description>
+    </explain>
+    <explain>
+      <position>2-4</position>
+      <description>Counted-controlled loop repeats according to a counter</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The none means no largest and smallest is known yet</description>
+    </explain>
+    <explain>
+      <position>8-9</position>
+      <description>This selection structure is within a while loop</description>
+    </explain>
+    <explain>
+      <position>10-11</position>
+      <description>This selection structure is within a while loop</description>
+    </explain>
+    <explain>
+      <position>8-9</position>
+      <description>Update largest with the input number if no largest is known (None) or this number is larger than largest</description>
+    </explain>
+    <explain>
+      <position>10-11</position>
+      <description>Update smallest with the input number if no smallest is known (None) or this number is smaller than smallest</description>
+    </explain>
+    <explain>
+      <position>8-11</position>
+      <description>Consider if this input number is smallest or largests</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>6-12</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute again if true condition</label>
+      <position>7-12</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After repetition structure</label>
+      <position>14-14</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before repetition structure</label>
+      <position>0-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Initialize counter</label>
+      <position>4-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update counter</label>
+      <position>12-12</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Check counter</label>
+      <position>6-6</position>
+      <colrange>6-17</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>7-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Counter-controlled loop</label>
+      <position>2-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Set largest and smallest to None</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>8-9</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>10-11</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Update largest</label>
+      <position>8-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update smallest</label>
+      <position>10-11</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Consider input smallest or largest</label>
+      <position>8-11</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

@@ -11,19 +11,35 @@ print("You can do it!")
     <topic>execution</topic>
   </topics>
   <explanations>
+    <explain>
+      <position>0-2</position>
+      <description>Print 3 Lines</description>
+    </explain>
   </explanations>
   <subgoals>
     <subgoal>
+      <label>Execute Starts Here</label>
       <position>0-0</position>
-      <label>Execute First</label>
+      <colrange></colrange>
+      <type>_automation</type>
     </subgoal>
     <subgoal>
+      <label>Execute Ends Here</label>
       <position>2-2</position>
-      <label>Execute Last</label>
+      <colrange></colrange>
+      <type>_automation</type>
     </subgoal>
     <subgoal>
+      <label>The Whole Program</label>
       <position>0-2</position>
-      <label>Execute Whole Program</label>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print Text Lines</label>
+      <position>0-2</position>
+      <colrange></colrange>
+      <type>_evaluation</type>
     </subgoal>
   </subgoals>
   </example>

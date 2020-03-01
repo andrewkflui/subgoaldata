@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Dating Message</title>
+  <program>
+answer = input("Hello.  Would you dine with me tonight? (Y or N): ")
+
+if answer == 'Y':
+    print("It is my soul that calls upon my name.")
+    print("How silver-sweet sound lovers' tongues by night,")
+    print("Like softest music to attending ears!")
+    print("Thank you!  See you outside OUClub at 7pm tonight.")
+if answer != 'Y':
+    print("It is ok. Perhaps you are busy.  Maybe next time")
+
+  </program>
+  <description>Print messages on condition on reply dating request</description>
+  <topics>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-6</position>
+      <description>Print three lines of messages if the variable num, the input, is negative</description>
+    </explain>
+    <explain>
+      <position>3-6</position>
+      <description>This code block, defined by aligned indentation, is executed if the condition is true</description>
+    </explain>
+    <explain>
+      <position>2-6</position>
+      <description>An one-way if structure that execute conditionally</description>
+    </explain>
+    <explain>
+      <position>8-8</position>
+      <description>Print three lines of messages if the variable num, the input, is negative</description>
+    </explain>
+    <explain>
+      <position>7-8</position>
+      <description>An one-way if structure that execute conditionally</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Print if answer Yes</label>
+      <position>3-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Executed if true condition</label>
+      <position>3-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>2-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print if answer not Yes</label>
+      <position>8-8</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>7-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

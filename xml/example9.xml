@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Data Processing</title>
+  <program>
+# this program uses float() to convert the string literal input
+
+num = input("Enter a number: ")  # num will contain a string literal
+num = float(num)                 # data becomes a floating-point type
+
+square = num * num               # floating-point can be multipied
+print("The square of the number is", square)
+
+
+  </program>
+  <description>Find square of a floating point number</description>
+  <topics>
+    <topic>data processing</topic>
+    <topic>comment</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>0-0</position>
+      <description>The whole line is considered as comment and is ignored</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>This part of the line is considered as comment and is ignored</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>This part of the line is considered as comment and is ignored</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>This part of the line is considered as comment and is ignored</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Comment whole line</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Comment to end-of-line</label>
+      <position>2-2</position>
+      <colrange>33-68</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Comment to end-of-line</label>
+      <position>3-3</position>
+      <colrange>33-69</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Comment to end-of-line</label>
+      <position>5-5</position>
+      <colrange>33-66</colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+
