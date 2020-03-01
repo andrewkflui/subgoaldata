@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Program Execution</title>
+  <program>
+print("You are the best person in the world!")
+print("Not just the best.  No one else dares to be the second best!")
+print("You can do it!")
+  </program>
+  <description>Prints several lines of text</description>
+  <topics>
+    <topic>execution</topic>
+  </topics>
+  <explanations>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <position>0-0</position>
+      <label>Execute First</label>
+    </subgoal>
+    <subgoal>
+      <position>2-2</position>
+      <label>Execute Last</label>
+    </subgoal>
+    <subgoal>
+      <position>0-2</position>
+      <label>Execute Whole Program</label>
+    </subgoal>
+  </subgoals>
+  </example>
+

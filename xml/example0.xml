@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Program Execution</title>
+  <program>
+print("Anders")
+print("Betsy")
+print("Chris")
+print("Doris")
+  </program>
+  <description>Prints several lines of text</description>
+  <topics>
+    <topic>execution</topic>
+  </topics>
+  <explanations>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <position>0-0</position>
+      <label>Execute First</label>
+    </subgoal>
+    <subgoal>
+      <position>3-3</position>
+      <label>Execute Last</label>
+    </subgoal>
+    <subgoal>
+      <position>0-3</position>
+      <label>Execute Whole Program</label>
+    </subgoal>
+  </subgoals>
+  </example>
+
