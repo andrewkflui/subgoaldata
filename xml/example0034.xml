@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Over-weight Warning</title>
+  <program>
+print("I am computer.  I will tell the truth about your weight")
+
+weight = float(input("Enter your weight (kg): "))
+
+if weight >= 90:
+    print("Oh no. So heavy")
+    print("You must do something now!")
+elif weight >= 80 and weight < 90:
+    print("You should keep fit now!")
+elif weight >= 70 and weight < 80:
+    print("You are doing well.  Keep working!")
+elif weight >= 60 and weight < 70:
+    print("Oh, really?  Are you lying to me? :)")
+elif weight < 60:
+    print("Cannot be true. Something wrong there?")
+
+  </program>
+  <description>Assess the weight and warn with different messages</description>
+  <topics>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>2-19</position>
+      <description>There are five possible messages for five ranges of weights.  All possible values of weights are covered</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (multi-way)</label>
+      <position>4-14</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Maps weight to warning messages</label>
+      <position>2-19</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Welcome message</label>
+      <position>0-1</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Message for open-range >=90</label>
+      <position>5-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Message for open-range <60</label>
+      <position>14-14</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

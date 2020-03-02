@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Cost of Buying Dumplings</title>
+  <program>
+dum = int(input("Enter the number of dumplings to buy: "))
+
+amount = 2.5 * dum
+
+if dum > 20:
+    amount = amount - 0.5 * (dum - 20)
+
+if (amount > 100):
+    amount = amount * 0.9
+
+print("Amount to pay is $", amount)
+
+  </program>
+  <description>Find the cost of buying dumplings, each of which normally sold at $2.5 and those more than the initial 20 sold at $2.0 a discount price</description>
+  <topics>
+    <topic>data processing</topic>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-4</position>
+      <description>Calculate discounted amount if buying more than 20</description>
+    </explain>
+    <explain>
+      <position>4-5</position>
+      <description>An one-way if structure that execute conditionally</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>Discount cost applied for more than 20 dumplings</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>Default or normal cost calculation based on $2.5 each</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>Discounted cost calculation based on $2.0 each after initial 20 dumplings</description>
+    </explain>
+    <explain>
+      <position>7-8</position>
+      <description>An one-way if structure that execute conditionally</description>
+    </explain>
+    <explain>
+      <position>7-8</position>
+      <description>Calculate discounted amount if amount over $100</description>
+    </explain>
+    <explain>
+      <position>2-8</position>
+      <description>Several rules are included in the calculation</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Discount if buying more than 20</label>
+      <position>3-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure</label>
+      <position>4-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Condition for discount cost</label>
+      <position>4-4</position>
+      <colrange>3-11</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Default cost calculation</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Discount cost calculation</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure</label>
+      <position>7-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Discount if amount over $100</label>
+      <position>7-8</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Data processing</label>
+      <position>0-10</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation</label>
+      <position>2-8</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>10-10</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

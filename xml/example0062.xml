@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Print a triangle</title>
+  <program>
+size = int(input("Enter size of mystical triangle: "))
+           
+y = 0
+while y < size:
+    x = 0
+    while x < size:
+        if x <= y:
+            print("*", end='')   # print an asterisk without newline
+        else:
+            print(" ", end='')   # print a space without newline
+        x += 1
+    print()    # print a newline
+    y += 1
+
+  </program>
+  <description>A triangle of side and height from the input size is printed. Actually prints a square with some locations printing an (empty) space and other locations stars.  The stars' locations form a triangle.</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>nested</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-12</position>
+      <description>Two while structures, one nested within another one</description>
+    </explain>
+    <explain>
+      <position>4-10</position>
+      <description>Print one line of characters, either a star or a space.</description>
+    </explain>
+    <explain>
+      <position>2-12</position>
+      <description>The number of lines is determined from the input size. A counter-controlled loop based on counter y</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>No character is appended at the end</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>Nothing is added to the end of the output</description>
+    </explain>
+    <explain>
+      <position>9-9</position>
+      <description>No character is appended at the end</description>
+    </explain>
+    <explain>
+      <position>9-9</position>
+      <description>Nothing is added to the end of the output</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>When x <= y, print a star, and if otherwise print a space</description>
+    </explain>
+    <explain>
+      <position>9-9</position>
+      <description>No character is appended at the end</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>5-10</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>3-12</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Nested structure</label>
+      <position>3-12</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print one line</label>
+      <position>4-10</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Print a number of lines</label>
+      <position>2-12</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Print a star</label>
+      <position>7-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Specify ending output</label>
+      <position>7-7</position>
+      <colrange>23-29</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Counter y controlled loop</label>
+      <position>2-12</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Counter x controlled loop</label>
+      <position>4-10</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print one space</label>
+      <position>9-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Specify ending output</label>
+      <position>9-9</position>
+      <colrange>23-29</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print a star or space conditionally</label>
+      <position>6-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>The condition for what to print</label>
+      <position>6-6</position>
+      <colrange>11-17</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Print a space</label>
+      <position>9-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

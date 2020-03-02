@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Grade-point printer</title>
+  <program>
+grade = input("Enter the grade of a course: ")
+
+if grade == 'A' :
+    point = 4.0
+elif grade == 'A-' :
+    point = 3.7
+elif grade == 'B+' :
+    point = 3.3
+elif grade == 'B' :
+    point = 3.0
+elif grade == 'B-' :
+    point = 2.7
+elif grade == 'C+' :
+    point = 2.3
+elif grade == 'C' :
+    point = 2.0
+elif grade == 'F' :
+    point = 0.0
+else :
+    point = -1
+
+if point < 0:
+    print("Not a valid grade")
+else:
+    print("The grade point is", point)
+
+  </program>
+  <description>Prints the grade-point according to an alphabet grade, with error handling</description>
+  <topics>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>19-19</position>
+      <description>Grade that is not one of the valid alphabets is considered error and -1 is used to indicate this error</description>
+    </explain>
+    <explain>
+      <position>21-24</position>
+      <description>Print the grade-point if grade is valid or an error message</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (two-way)</label>
+      <position>21-24</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Maps grades to grade-points</label>
+      <position>2-19</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Assign indicator for error grade</label>
+      <position>19-19</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Print grade-point or error message</label>
+      <position>21-24</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

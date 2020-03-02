@@ -26,8 +26,8 @@ public class ExampleEditor extends javax.swing.JPanel {
         this.listener = listener;
     }
 
-    public void setExample(Example program) {
-        currentExample = program;
+    public void setExample(Example example) {
+        currentExample = example;
         refreshExampleInfoJPanel(currentExample);
     }
 
@@ -245,8 +245,8 @@ public class ExampleEditor extends javax.swing.JPanel {
         }
         // IMPORTANT: must store the value first because setRowRange will change the status
         boolean toChangeRow = labelEditor2.isMarkingRow();
-        boolean toChangeCol = labelEditor2.isMarkingColumn(); 
-        
+        boolean toChangeCol = labelEditor2.isMarkingColumn();
+
         if (toChangeRow) {
             labelEditor2.setRowRange(finder.getStartrow() + "-" + finder.getEndrow());
         }

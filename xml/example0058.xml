@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Find average monthly sales with input validation</title>
+  <program>
+
+while True:
+    try :
+        period = int(input("Enter the number of months to analyse: "))
+        if period > 0:
+          break
+        print("Error.Please enter a positive integer")
+    except ValueError:
+        print("Error. Please enter an integer")
+
+count = 1
+total = 0
+
+while count <= period:
+    while True:
+        try:
+            sales = float(input("Enter sales in month #{}: ".format(count)))
+            if sales >= 0: break
+            print("Error.Please enter an non-negative sales figure")
+        except ValueError:
+            print("Error. Please enter a number")        
+    
+    total = total + sales
+    count = count + 1
+
+print("Total sales = $", total)
+print("Average monthly sales = $", total / period)
+
+
+  </program>
+  <description>Find the total and average monthly sales with input validation</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>input validation</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>1-8</position>
+      <description>The variable period holds the number of months, which controls how many months to analyze</description>
+    </explain>
+    <explain>
+      <position>14-20</position>
+      <description>The variable period holds the number of months, which controls how many months to analyze</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input the period with validation</label>
+      <position>1-8</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>25-26</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input the monthly sales with validation</label>
+      <position>14-20</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Find the total and average monthly sales</label>
+      <position>10-23</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input validation structure</label>
+      <position>1-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input validation structure</label>
+      <position>14-20</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

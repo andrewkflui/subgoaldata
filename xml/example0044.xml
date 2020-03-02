@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Input-controlled loop: Rose printing</title>
+  <program>
+ans = 'Y'   # assume ans is 'Y' so that condition is True
+
+while ans == 'Y':
+    print("A rose for you!")
+    ans = input("Do you want a rose (Y or N)? ")
+
+
+  </program>
+  <description>Print a number of roses as long as the input is Y</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>0-0</position>
+      <description>The status controls whether to continue rose printing, and it is intialized to Yes (Y)</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>Update the status of whether to continue rose printing</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>2-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute again if true condition</label>
+      <position>3-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before repetition structure</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Initialize status</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update status</label>
+      <position>4-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

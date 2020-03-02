@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Counter-controlled Loop: Rose printing</title>
+  <program>
+num = int(input("Enter the desired number of roses: "))
+
+while num > 0:
+    print("A rose for you!")
+    num = num - 1
+print("You could have more!")
+  </program>
+  <description>Print a number of roses using a while loop according to input</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-4</position>
+      <description>Code block, aligned by indentation, is to be executed (again) if the condition remains true.  If the condition is false, the execution will stop and leave the structure</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>The counter (variable num) is initilized with the input number, and it is also used to track of the number of repetitions</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>The counter is updated as the repetition is done once</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The counter is checked if the repetition should continue or stop</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>The input will determine the number of roses to print</description>
+    </explain>
+    <explain>
+      <position>2-4</position>
+      <description>Counter-controlled loop repeats according to a counter</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>2-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute again if true condition</label>
+      <position>3-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After repetition structure</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before repetition structure</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Initialize counter</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update counter</label>
+      <position>4-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Check counter</label>
+      <position>2-2</position>
+      <colrange>6-13</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Ask for how many roses</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Counter-controlled loop</label>
+      <position>2-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

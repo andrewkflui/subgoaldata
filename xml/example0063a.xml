@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Guess-a-number game with input validation</title>
+  <program>
+import random
+
+num = random.randint(1,101)  # generate a random number btw 1 to 100
+
+guess = None
+while guess != num:
+    try :
+        guess = int(input("Enter an integer: "))
+        if guess <= 0 or guess > 100:
+            print("Please enter a number between 1 and 100")
+            continue
+            
+        if guess < num:
+            print("Too small")
+        if guess > num:
+            print("Too large")
+        
+    except ValueError:
+        print("Input Error: You should enter an integer")
+
+print("You have guessed right!")
+
+
+  </program>
+  <description></description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>input validation</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>0-0</position>
+      <description>The function randint of the module is needed</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>Draw a random integer between 0 and 100 (inclusive)</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>The condition for continue loop is a wrong guess</description>
+    </explain>
+    <explain>
+      <position>12-15</position>
+      <description>Print a feedback message to the player if wrong guess</description>
+    </explain>
+    <explain>
+      <position>4-18</position>
+      <description>The loop stops if the input is the same as the rnadomly drawn number</description>
+    </explain>
+    <explain>
+      <position>6-18</position>
+      <description>A try-except structure consists of a try block that normally executed and in that error may occur, and a except block that is executed when the specified error occurs</description>
+    </explain>
+    <explain>
+      <position>7-15</position>
+      <description>The try block executes normally in that errors occured can be handled</description>
+    </explain>
+    <explain>
+      <position>18-18</position>
+      <description>The except block executes when the specified error occured</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Import module random</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Draw a random integer</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>5-18</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input validation structure</label>
+      <position>4-18</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The condition</label>
+      <position>5-5</position>
+      <colrange>6-18</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print feedback</label>
+      <position>12-15</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input-controlled loop</label>
+      <position>4-18</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Try-except structure</label>
+      <position>6-18</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute normally</label>
+      <position>7-15</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute when error occured</label>
+      <position>18-18</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Source of string-to-number error</label>
+      <position>7-7</position>
+      <colrange>16-19</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Handler of string-to-number error</label>
+      <position>18-18</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

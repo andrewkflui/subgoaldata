@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Guess-a-number game</title>
+  <program>
+import random
+
+num = random.randint(1,101)  # generate a random number btw 1 to 100
+
+guess = None
+while guess != num:
+    guess = int(input("Enter an integer: "))
+    if guess < num:
+        print("Too small")
+    if guess > num:
+        print("Too large")
+
+print("You have guessed right!")
+
+  </program>
+  <description></description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>0-0</position>
+      <description>The function randint of the module is needed</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>Draw a random integer between 0 and 100 (inclusive)</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>The condition for continue loop is a wrong guess</description>
+    </explain>
+    <explain>
+      <position>7-10</position>
+      <description>Print a feedback message to the player if wrong guess</description>
+    </explain>
+    <explain>
+      <position>4-10</position>
+      <description>The loop stops if the input is the same as the rnadomly drawn number</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Import module random</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Draw a random integer</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>5-10</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input validation structure</label>
+      <position>4-10</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The condition</label>
+      <position>5-5</position>
+      <colrange>6-18</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print feedback</label>
+      <position>7-10</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input-controlled loop</label>
+      <position>4-10</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

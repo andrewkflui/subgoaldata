@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Input validation for a positive integer</title>
+  <program>
+while True:
+    try :
+        period = int(input("Enter the number of months to analyse: "))
+        if period > 0:
+          break
+        print("Error.Please enter a positive integer")
+    except ValueError:
+        print("Error. Please enter an integer")
+    
+print("After the while structure")
+  </program>
+  <description>An input validation loop that repeats until a positive integer is entered</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>input validation</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>1-7</position>
+      <description>Code block, aligned by indentation, is to be executed (again) if the condition remains true.  If the condition is false, the execution will stop and leave the structure</description>
+    </explain>
+    <explain>
+      <position>9-9</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>0-7</position>
+      <description>Input-controlled loop repeats until the input is valid</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>The condition of a invalid input</description>
+    </explain>
+    <explain>
+      <position>2-4</position>
+      <description>The loop is to stop if the input is found valid</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>Print error message after the input validity test failed, which is a non-positive integer</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>The loop is to stop, and the execution will leave the while structure</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>Print error message after the input validity test failed, which is not an integer</description>
+    </explain>
+    <explain>
+      <position>1-7</position>
+      <description>Error occurs in string-to-number conversion if the input string is not of integer format</description>
+    </explain>
+    <explain>
+      <position>1-7</position>
+      <description>A try-except structure consists of a try block that normally executed and in that error may occur, and a except block that is executed when the specified error occurs</description>
+    </explain>
+    <explain>
+      <position>2-5</position>
+      <description>The try block executes normally in that errors occured can be handled</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>The except block executes when the specified error occured</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>0-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute again if true condition</label>
+      <position>1-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After repetition structure</label>
+      <position>9-9</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input-controlled loop</label>
+      <position>0-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Vallid input condition</label>
+      <position>3-3</position>
+      <colrange>11-21</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>3-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Test input validity</label>
+      <position>2-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input error message</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>The break statement</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input error message</label>
+      <position>7-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Handle input string-to-number error</label>
+      <position>1-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Try-except structure</label>
+      <position>1-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute normally</label>
+      <position>2-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute when error occured</label>
+      <position>7-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Source of string-to-number error</label>
+      <position>2-2</position>
+      <colrange>17-20</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Handler of string-to-number error</label>
+      <position>6-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Data Processing</title>
+  <program>
+# comment-example.py
+# Shows how comments are used
+# Written by Betsy on 20-Jun-2018
+
+# print("You can do it!")
+# Betsy (20/6/2018): not sure if the above line should be kept
+print("You are the best person in the world!")  # this line is good
+print("Not just the best.  No one else dares to be the second best!")
+
+
+  </program>
+  <description>An example of defining program header and comments</description>
+  <topics>
+    <topic>comment</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>0-2</position>
+      <description>The whole line is considered as comment and is ignored</description>
+    </explain>
+    <explain>
+      <position>4-5</position>
+      <description>The whole line is considered as comment and is ignored</description>
+    </explain>
+    <explain>
+      <position>0-2</position>
+      <description>Program header is a comment that contains key information about the program</description>
+    </explain>
+    <explain>
+      <position>4-5</position>
+      <description>Markup program code with information</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>Commented out program code that wants to be temporary ignored</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Comment whole line</label>
+      <position>0-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Comment whole line</label>
+      <position>4-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Program header</label>
+      <position>0-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Explanation markup</label>
+      <position>4-5</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Commented out</label>
+      <position>4-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

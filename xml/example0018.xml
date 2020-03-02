@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Input Testing</title>
+  <program>
+num = float(input("Enter a negative number: "))
+
+if num < 0:
+    print("Yes, you entered a negative number!")
+
+print("Thank you")
+  </program>
+  <description>Prints a message if the input is a negative number</description>
+  <topics>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>2-3</position>
+      <description>Print a message if the variable num, the input, is negative</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>This code block is executed if the condition is true</description>
+    </explain>
+    <explain>
+      <position>2-3</position>
+      <description>An one-way if structure that execute conditionally</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The condition, which may be true or false, determines the execution of a block of code</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>This code is always executed</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>This code is always executed</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Print if negative number</label>
+      <position>2-3</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Executed if true condition</label>
+      <position>3-3</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure</label>
+      <position>2-3</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The condition</label>
+      <position>2-2</position>
+      <colrange>3-10</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After selection structure</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before selection structure</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

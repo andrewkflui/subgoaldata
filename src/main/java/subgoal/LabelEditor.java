@@ -19,10 +19,12 @@ import javax.swing.JOptionPane;
 
 public class LabelEditor extends javax.swing.JPanel {
 
-    private List<HashMap> labelList = new ArrayList();
+    private List<Label> labelList = new ArrayList();
     private Label selectedLabel = null;
     private boolean markingRow = false;
     private boolean markingColumn = false;
+
+    private List<Label> clipboard = new ArrayList();
 
     public LabelEditor() {
         initComponents();
@@ -45,7 +47,7 @@ public class LabelEditor extends javax.swing.JPanel {
     void refreshLabelJList() {
         DefaultListModel model = (DefaultListModel) jList1.getModel();
         model.removeAllElements();
-        for (HashMap m : labelList) {
+        for (Label m : labelList) {
             model.addElement(m);
         }
     }
@@ -74,6 +76,15 @@ public class LabelEditor extends javax.swing.JPanel {
         refreshLabelInfoJPanel(selectedLabel);
     }
 
+    public List<Label> getSelectedLabels() {
+        List<Label> result = new ArrayList();
+        int indices[] = jList1.getSelectedIndices();
+        for (int index : indices) {
+            result.add(labelList.get(index));
+        }
+        return result;
+    }
+
     void copyToLabel(HashMap label) {
         label.put("Label", jTextField3.getText());
         label.put("RowRange", jTextField1.getText());
@@ -87,6 +98,9 @@ public class LabelEditor extends javax.swing.JPanel {
         jButton1.setEnabled(enabled);
         jButton2.setEnabled(enabled);
         jButton5.setEnabled(enabled);
+        jButton6.setEnabled(enabled);
+        jButton7.setEnabled(enabled);
+        jButton8.setEnabled(enabled);        
     }
 
     void setLabelInfoPanelEnabled(boolean enabled) {
@@ -151,6 +165,9 @@ public class LabelEditor extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         jPanel2 = new javax.swing.JPanel();
@@ -169,45 +186,106 @@ public class LabelEditor extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(480, 300));
         setLayout(new java.awt.GridBagLayout());
 
-        jPanel1.setMinimumSize(new java.awt.Dimension(120, 52));
-        jPanel1.setPreferredSize(new java.awt.Dimension(120, 300));
+        jPanel1.setMinimumSize(new java.awt.Dimension(160, 52));
+        jPanel1.setPreferredSize(new java.awt.Dimension(160, 300));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
         jButton1.setText("New");
+        jButton1.setMaximumSize(new java.awt.Dimension(80, 28));
+        jButton1.setMinimumSize(new java.awt.Dimension(80, 28));
+        jButton1.setPreferredSize(new java.awt.Dimension(80, 28));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         jPanel1.add(jButton1, gridBagConstraints);
 
-        jButton5.setText("New (Copy)");
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
+        jButton5.setText("Clone");
+        jButton5.setMaximumSize(new java.awt.Dimension(80, 28));
+        jButton5.setMinimumSize(new java.awt.Dimension(80, 28));
+        jButton5.setPreferredSize(new java.awt.Dimension(80, 28));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         jPanel1.add(jButton5, gridBagConstraints);
 
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
         jButton2.setText("Delete");
+        jButton2.setMaximumSize(new java.awt.Dimension(80, 28));
+        jButton2.setMinimumSize(new java.awt.Dimension(80, 28));
+        jButton2.setPreferredSize(new java.awt.Dimension(80, 28));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         jPanel1.add(jButton2, gridBagConstraints);
+
+        jButton6.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
+        jButton6.setText("Copy");
+        jButton6.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton6.setMaximumSize(new java.awt.Dimension(80, 28));
+        jButton6.setMinimumSize(new java.awt.Dimension(80, 28));
+        jButton6.setPreferredSize(new java.awt.Dimension(80, 28));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        jPanel1.add(jButton6, gridBagConstraints);
+
+        jButton7.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
+        jButton7.setText("Paste");
+        jButton7.setMaximumSize(new java.awt.Dimension(80, 28));
+        jButton7.setMinimumSize(new java.awt.Dimension(80, 28));
+        jButton7.setPreferredSize(new java.awt.Dimension(80, 28));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        jPanel1.add(jButton7, gridBagConstraints);
+
+        jButton8.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
+        jButton8.setText("Custom");
+        jButton8.setMaximumSize(new java.awt.Dimension(80, 28));
+        jButton8.setMinimumSize(new java.awt.Dimension(80, 28));
+        jButton8.setPreferredSize(new java.awt.Dimension(80, 28));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8jButton1ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        jPanel1.add(jButton8, gridBagConstraints);
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(120, 132));
 
@@ -220,6 +298,8 @@ public class LabelEditor extends javax.swing.JPanel {
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
@@ -373,17 +453,17 @@ public class LabelEditor extends javax.swing.JPanel {
             refreshLabelJList();
             jList1.setSelectedValue(selectedLabel, true);
             refreshLabelInfoJPanel(selectedLabel);
-        } else if (btn.getText().equals("New (Copy)")) {
+        } else if (btn.getText().equals("Clone")) {
             int indices[] = jList1.getSelectedIndices();
             if (indices.length != 1) {
-                JOptionPane.showMessageDialog(this, "Select only one label to copy");
+                JOptionPane.showMessageDialog(this, "Select only one label to clone");
                 return;
             }
             Label toCopy = (Label) labelList.get(indices[0]);
             this.selectedLabel = toCopy.copy();
             labelList.add(this.selectedLabel);
             refreshLabelJList();
-            jList1.setSelectedIndex(labelList.size()-1);
+            jList1.setSelectedIndex(labelList.size() - 1);
             refreshLabelInfoJPanel(this.selectedLabel);
         } else if (btn.getText().equals("Delete")) {
             int indices[] = jList1.getSelectedIndices();
@@ -393,6 +473,31 @@ public class LabelEditor extends javax.swing.JPanel {
             refreshLabelJList();
             selectedLabel = null;
             refreshLabelInfoJPanel(selectedLabel);
+        } else if (btn.getText().equals("Copy")) {
+            int indices[] = jList1.getSelectedIndices();
+            if (indices.length == 0) {
+                JOptionPane.showMessageDialog(this, "Select at least one label to copy");
+                return;
+            }
+            clipboard.clear();
+            for (int index : indices) {
+                clipboard.add(labelList.get(index));
+            }
+            JOptionPane.showMessageDialog(this, "Copied " + clipboard.size() + " labels");
+        } else if (btn.getText().equals("Paste")) {
+            if (clipboard.size() == 0) {
+                JOptionPane.showMessageDialog(this, "Nothing in the clipboard");
+                return;
+            }
+            for (Label m : clipboard) {
+                Label clone = m.copy();
+                String label = clone.getLabel();
+                clone.setLabel("[C]" + label);
+                labelList.add(clone);
+            }
+            refreshLabelJList();
+            JOptionPane.showMessageDialog(this, "Pasted " + clipboard.size() + " labels");
+            clipboard.clear();
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -435,6 +540,10 @@ public class LabelEditor extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton8jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -442,6 +551,9 @@ public class LabelEditor extends javax.swing.JPanel {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList<String> jList1;

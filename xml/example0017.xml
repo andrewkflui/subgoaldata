@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Data Processing</title>
+  <program>
+num = int(input("Enter a number: "))
+
+result = num % 2 == 0
+print(num, "is a even number:", result)
+
+  </program>
+  <description>Evaluate if an input integer is an even number</description>
+  <topics>
+    <topic>data processing</topic>
+    <topic>operator</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>0-0</position>
+      <description>Convert input string to integer</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>Check if the two sides of the equality operator are the same</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>Store result of calculation to a variable</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The molulus operator (%) has the highest priority here</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The equality operator has the next highest priority</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The assignment operator (=) has the lowest priority</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation</label>
+      <position>2-2</position>
+      <colrange>9-21</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>3-3</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Data processing pattern</label>
+      <position>1-3</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>0-0</position>
+      <colrange>6-36</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>equality operation</label>
+      <position>2-2</position>
+      <colrange>17-19</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Store to variable</label>
+      <position>2-2</position>
+      <colrange>0-9</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation Step 1</label>
+      <position>2-2</position>
+      <colrange>9-16</colrange>
+      <type>_evaluation</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation Step 2</label>
+      <position>2-2</position>
+      <colrange>9-21</colrange>
+      <type>_evaluation</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculation Step 3</label>
+      <position>2-2</position>
+      <colrange>0-21</colrange>
+      <type>_evaluation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

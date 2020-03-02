@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Find larger of 3 numbers</title>
+  <program>
+s1, s2, s3 = input("Enter three numbers: ").split()
+
+num1 = float(s1)
+num2 = float(s2)
+num3 = float(s3)
+
+maxnum = num1       # assume num1 is maximum
+if num2 > maxnum:
+    maxnum = num2
+if num3 > maxnum:
+    maxnum = num3
+
+print("Maximum is", maxnum)
+
+  </program>
+  <description>Print the larger of three input numbers</description>
+  <topics>
+    <topic>if</topic>
+    <topic>input</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>0-0</position>
+      <description>Expects the input to be three numbers separated by space</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>The input string is split, using space as separators, into a list of strings</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>Three variables on the left hand side of the assignment operator will store three values on the right hand side, which can be a tuple or a list of 3 items.</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>Assume that the first number is the largest (so-far)</description>
+    </explain>
+    <explain>
+      <position>7-8</position>
+      <description>The largest is stored in maxnum</description>
+    </explain>
+    <explain>
+      <position>9-10</position>
+      <description>The largest is stored in maxnum</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Split input into list of strings</label>
+      <position>0-0</position>
+      <colrange>43-51</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Simultaneous assignment</label>
+      <position>0-0</position>
+      <colrange>0-13</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>2-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>7-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>12-12</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>9-10</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Assume the first as largest</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update largest of first 2 numbers</label>
+      <position>7-8</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update largest of 3 numbers</label>
+      <position>9-10</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

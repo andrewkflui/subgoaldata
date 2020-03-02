@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Input validation for a positive integer</title>
+  <program>
+while True:
+    age = int(input("Enter your age: "))
+    if age > 0: 
+      break
+    print("Input error.  Age must be positive!")
+    
+print("After the while structure")
+  </program>
+  <description>An input validation loop that repeats until a positive integer is entered</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>input validation</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>1-4</position>
+      <description>Code block, aligned by indentation, is to be executed (again) if the condition remains true.  If the condition is false, the execution will stop and leave the structure</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>2-4</position>
+      <description>Input-controlled loop repeats until the input is valid</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The condition of a valid input, which makes the loop to stop</description>
+    </explain>
+    <explain>
+      <position>2-3</position>
+      <description>The loop is to stop if the input is found valid</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>Print error message after the input validity test failed</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>The loop is to stop, and the execution will leave the while structure</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>0-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute again if true condition</label>
+      <position>1-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After repetition structure</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>1-1</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input-controlled loop</label>
+      <position>2-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Valid input condition</label>
+      <position>2-2</position>
+      <colrange>7-14</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>2-3</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Test validity of input</label>
+      <position>2-3</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input error message</label>
+      <position>4-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>The break statement</label>
+      <position>3-3</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

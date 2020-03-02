@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Sum positive input integers</title>
+  <program>
+total = 0
+
+while True:
+    number = int(input("Enter positive integers (-1 to stop): "))
+    if number == -1:
+        break
+    elif number > 0:
+        total += number
+
+print("Sum of positive integers =", total)
+
+  </program>
+  <description>Adds up positive input integers until -1 is entered.  It is an input-controlled loop.</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>break</topic>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-7</position>
+      <description>Code block, aligned by indentation, is to be executed (again) if the condition remains true.  If the condition is false, the execution will stop and leave the structure</description>
+    </explain>
+    <explain>
+      <position>14-14</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>The input data is inside the loop and repeat indefinitely, each time reads in one number</description>
+    </explain>
+    <explain>
+      <position>2-7</position>
+      <description>An input-controlled loop repeats according to input condition.  It is also called sentinel-controlled loop</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The none means no largest and smallest is known yet</description>
+    </explain>
+    <explain>
+      <position>4-7</position>
+      <description>This selection structure is within a while loop</description>
+    </explain>
+    <explain>
+      <position>10-11</position>
+      <description>One of the addition of input number to the total</description>
+    </explain>
+    <explain>
+      <position>4-7</position>
+      <description>Consider if the input should stop the loop or add to the total</description>
+    </explain>
+    <explain>
+      <position>2-7</position>
+      <description>A always true condition means an infinite loop that does not stop.  However, the break statement opens an exit door that makes the loop stoppable.</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>Executing the break statement will stop the loop immediately and leave the repetition structure</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>Stop the loop if this input is -1</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>2-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute again if true condition</label>
+      <position>3-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After repetition structure</label>
+      <position>14-14</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before repetition structure</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>7-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input-controlled loop</label>
+      <position>2-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Set largest and smallest to None</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (2-way)</label>
+      <position>4-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Add up total</label>
+      <position>10-11</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Consider stop the loop or add the number</label>
+      <position>4-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Infinite loop</label>
+      <position>2-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The break statement</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Stop loop if input is -1</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

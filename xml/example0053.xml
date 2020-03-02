@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Find average monthly sales</title>
+  <program>
+print("Average of integers")
+num = int(input("Enter an integer (-1 to stop): "))
+total = 0
+count = 0
+
+while num != -1 :
+    total = total + num
+    count = count + 1
+    num = int(input("Enter an integer (-1 to stop): "))
+
+print("The average is", total / count)
+
+  </program>
+  <description>Find the total and average monthly sales</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>6-8</position>
+      <description>Code block, aligned by indentation, is to be executed (again) if the condition remains true.  If the condition is false, the execution will stop and leave the structure</description>
+    </explain>
+    <explain>
+      <position>10-10</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>0-3</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>The counter (variable count) is initilized with 0</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>The counter is updated as the repetition is done once</description>
+    </explain>
+    <explain>
+      <position>10-10</position>
+      <description>The average is calculated with total and counter</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>The variable num holds the input integer</description>
+    </explain>
+    <explain>
+      <position>1-7</position>
+      <description>Input-controlled loop repeats until the input is -1</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The total will add up all input monthly sales</description>
+    </explain>
+    <explain>
+      <position>8-8</position>
+      <description>The variable num holds the input integer</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>5-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute again if true condition</label>
+      <position>6-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After repetition structure</label>
+      <position>10-10</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before repetition structure</label>
+      <position>0-3</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Initialize counter</label>
+      <position>3-3</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update counter</label>
+      <position>7-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculate average with total and counter</label>
+      <position>10-10</position>
+      <colrange>24-37</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input an integer</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input-controlled loop</label>
+      <position>1-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Initialize total</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>10-10</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Welcome message</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input an integer</label>
+      <position>8-8</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Condition for loop continuity</label>
+      <position>5-5</position>
+      <colrange>6-16</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

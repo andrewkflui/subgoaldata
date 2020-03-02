@@ -62,7 +62,7 @@ public class ExampleManager extends javax.swing.JPanel implements ExampleEditorL
                 break;
             }
             count++;
-            id = "example" + count;
+            id = "example" + String.format("%04d", count);
         }
         return id;
     }
@@ -113,6 +113,23 @@ public class ExampleManager extends javax.swing.JPanel implements ExampleEditorL
         }
     }
 
+    private void fixExampleID() {
+        String prefix = "example";
+        int prefixLen = prefix.length();
+        for (Example m : exampleList) {
+            String id = m.getID();
+            String numstr = id.substring(prefixLen);
+            try {
+                int num = Integer.parseInt(numstr);
+                id = "example" + String.format("%04d", num);
+                m.setID(id);
+                //System.out.println(id);
+            } catch (Exception ex) {
+            }
+        }
+        refreshLabelJList();
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -128,6 +145,7 @@ public class ExampleManager extends javax.swing.JPanel implements ExampleEditorL
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         programEditor1 = new subgoal.ExampleEditor();
@@ -135,57 +153,94 @@ public class ExampleManager extends javax.swing.JPanel implements ExampleEditorL
         setPreferredSize(new java.awt.Dimension(1000, 300));
         setLayout(new java.awt.GridBagLayout());
 
-        jPanel1.setMinimumSize(new java.awt.Dimension(160, 80));
-        jPanel1.setPreferredSize(new java.awt.Dimension(160, 300));
+        jPanel1.setMinimumSize(new java.awt.Dimension(180, 80));
+        jPanel1.setPreferredSize(new java.awt.Dimension(180, 300));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
         jButton1.setText("New");
+        jButton1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton1.setMaximumSize(new java.awt.Dimension(80, 28));
+        jButton1.setMinimumSize(new java.awt.Dimension(80, 28));
+        jButton1.setPreferredSize(new java.awt.Dimension(80, 28));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         jPanel1.add(jButton1, gridBagConstraints);
 
-        jButton3.setText("Copy");
+        jButton3.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
+        jButton3.setText("Clone");
+        jButton3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton3.setMaximumSize(new java.awt.Dimension(80, 28));
+        jButton3.setMinimumSize(new java.awt.Dimension(80, 28));
+        jButton3.setPreferredSize(new java.awt.Dimension(80, 28));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         jPanel1.add(jButton3, gridBagConstraints);
 
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
         jButton2.setText("Delete");
+        jButton2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton2.setMaximumSize(new java.awt.Dimension(80, 28));
+        jButton2.setMinimumSize(new java.awt.Dimension(80, 28));
+        jButton2.setPreferredSize(new java.awt.Dimension(80, 28));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         jPanel1.add(jButton2, gridBagConstraints);
 
+        jButton4.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
         jButton4.setText("Sort");
+        jButton4.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton4.setMaximumSize(new java.awt.Dimension(80, 28));
+        jButton4.setMinimumSize(new java.awt.Dimension(80, 28));
+        jButton4.setPreferredSize(new java.awt.Dimension(80, 28));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         jPanel1.add(jButton4, gridBagConstraints);
+
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
+        jButton5.setText("Custom");
+        jButton5.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jButton5.setMaximumSize(new java.awt.Dimension(80, 28));
+        jButton5.setMinimumSize(new java.awt.Dimension(80, 28));
+        jButton5.setPreferredSize(new java.awt.Dimension(80, 28));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        jPanel1.add(jButton5, gridBagConstraints);
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(120, 132));
 
@@ -198,7 +253,8 @@ public class ExampleManager extends javax.swing.JPanel implements ExampleEditorL
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
@@ -238,7 +294,7 @@ public class ExampleManager extends javax.swing.JPanel implements ExampleEditorL
             exampleList.add(newExample);
             refreshLabelJList();
             jList1.setSelectedValue(newExample, true);
-        } else if (btn.getText().equals("Copy")) {
+        } else if (btn.getText().equals("Clone")) {
             int indices[] = jList1.getSelectedIndices();
             if (indices.length != 1) {
                 JOptionPane.showMessageDialog(this, "Select only one example to copy");
@@ -266,12 +322,19 @@ public class ExampleManager extends javax.swing.JPanel implements ExampleEditorL
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // Custom Button
+        
+        //fixExampleID();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

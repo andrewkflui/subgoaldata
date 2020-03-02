@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Input validation for a positive integer</title>
+  <program>
+while True:
+    age = int(input("Enter your age: "))
+    if age <= 0: 
+        print("Input error.  Age must be positive!")
+        continue
+    print("Thank you for your reply")
+    break
+    
+print("After the while structure")
+  </program>
+  <description>An input validation loop that repeats until a positive integer is entered</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>input validation</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>1-6</position>
+      <description>Code block, aligned by indentation, is to be executed (again) if the condition remains true.  If the condition is false, the execution will stop and leave the structure</description>
+    </explain>
+    <explain>
+      <position>8-8</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>0-6</position>
+      <description>Input-controlled loop repeats until the input is valid</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The condition of a invalid input</description>
+    </explain>
+    <explain>
+      <position>2-4</position>
+      <description>The loop is to continue if input error</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>Print error message after the input validity test failed</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>The execution will go back to the beginning of the repetition structure. The remaining last part of the structure is skipped</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>The loop is to stop, and the execution will leave the while structure</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>0-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute again if true condition</label>
+      <position>1-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After repetition structure</label>
+      <position>8-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>1-1</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Input-controlled loop</label>
+      <position>0-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Invalid input condition</label>
+      <position>2-2</position>
+      <colrange>7-15</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>2-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Test input error</label>
+      <position>2-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input error message</label>
+      <position>3-3</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>The continue statement</label>
+      <position>4-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The break statement</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Program Execution</title>
+  <program>
+print("First Line")
+print("Second Line")
+print("Third Line")
+  </program>
+  <description>Prints several lines of text</description>
+  <topics>
+    <topic>execution</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>0-2</position>
+      <description>Print 3 Lines</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Execute Starts Here</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute Ends Here</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The Whole Program</label>
+      <position>0-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print Text Lines</label>
+      <position>0-2</position>
+      <colrange></colrange>
+      <type>_evaluation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

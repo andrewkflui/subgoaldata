@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Find summation of 1 to N</title>
+  <program>
+N = int(input("Enter the N in an arithmetic sequence 1 + 2 + ... + N: "))
+count = 1   # the counter variable, runs from 1 to N
+total = 0   # the variable for summation
+
+while count <= N:
+    total = total + count
+    count = count + 1
+
+print("Sum of the arithmetic sequence =", total)
+
+  </program>
+  <description>Find summation of integers from 1 to N</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>data processing</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>5-6</position>
+      <description>Code block, aligned by indentation, is to be executed (again) if the condition remains true.  If the condition is false, the execution will stop and leave the structure</description>
+    </explain>
+    <explain>
+      <position>8-8</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>0-2</position>
+      <description>Execute always and once</description>
+    </explain>
+    <explain>
+      <position>1-1</position>
+      <description>The counter (variable count) is initilized with 0, and will run 0, 1all the way to N</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>The counter is updated as the repetition is done once</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>The counter is checked if the repetition should continue or stop</description>
+    </explain>
+    <explain>
+      <position>1-6</position>
+      <description>Counter-controlled loop repeats according to a counter</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>The total will add up all integers from 1 to N</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>One of the addition of 1 + 2+ 3 + ... + N</description>
+    </explain>
+    <explain>
+      <position>1-6</position>
+      <description>Calculate the factorial of N with a loop</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>4-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute again if true condition</label>
+      <position>5-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>After repetition structure</label>
+      <position>8-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before repetition structure</label>
+      <position>0-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Initialize counter</label>
+      <position>1-1</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update counter</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Check counter</label>
+      <position>4-4</position>
+      <colrange>6-16</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Counter-controlled loop</label>
+      <position>1-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Initialize total</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Add numbers to total</label>
+      <position>7-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>8-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Calculate</label>
+      <position>1-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

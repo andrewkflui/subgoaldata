@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Evaluate Eligibility</title>
+  <program>
+age = int(input("Enter age: "))
+salary = int(input("Enter annual salary: "))
+
+if age > 35 or salary > 200000:
+    print("Not Eligible")        
+else:
+    print("Eligible")
+    
+
+
+  </program>
+  <description>Evaluate eligibility based on age and salary level</description>
+  <topics>
+    <topic>if</topic>
+    <topic>operator</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-3</position>
+      <description>The condition is made up of two conditions connected with the logical operator or</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>The in-eligible condition is either age > 35 or salary > 200000</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Selection structure (2-way)</label>
+      <position>3-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Evaluate eligibility</label>
+      <position>3-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-1</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Composite condition</label>
+      <position>3-3</position>
+      <colrange>3-30</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Condition 1</label>
+      <position>3-3</position>
+      <colrange>3-11</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Condition 2</label>
+      <position>3-3</position>
+      <colrange>15-30</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The in-eligible condition</label>
+      <position>3-3</position>
+      <colrange>3-41</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Age is over 35</label>
+      <position>3-3</position>
+      <colrange>3-11</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Salary is over 200000</label>
+      <position>3-3</position>
+      <colrange>15-30</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

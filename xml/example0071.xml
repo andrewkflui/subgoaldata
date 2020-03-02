@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Print every second integer from 0 to 9</title>
+  <program>
+
+for value in range(0, 10, 2):
+    print(value, end=',')
+
+
+
+  </program>
+  <description>Print every second integer (even numbers) from 0 to 9 with for iteration over a range</description>
+  <topics>
+    <topic>for</topic>
+    <topic>loop</topic>
+    <topic>range</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>1-1</position>
+      <description>The sequence is a list of strings</description>
+    </explain>
+    <explain>
+      <position>1-1</position>
+      <description>Each item in the sequence is assigned to the variable (value) one by one</description>
+    </explain>
+    <explain>
+      <position>1-2</position>
+      <description>Traverse through every number of a range</description>
+    </explain>
+    <explain>
+      <position>1-2</position>
+      <description>Print every integer in the range from 0 to 9</description>
+    </explain>
+    <explain>
+      <position>1-1</position>
+      <description>Create a range of integers from 0 to 9 with step size of 2</description>
+    </explain>
+    <explain>
+      <position>1-1</position>
+      <description>The second parameter of range is the exclusive end of range, which means it (10) is not included</description>
+    </explain>
+    <explain>
+      <position>1-1</position>
+      <description>The first parameter of range is the inclusive start of range, which means it (0) is included</description>
+    </explain>
+    <explain>
+      <position>1-1</position>
+      <description>The third optional parameter of range is the step size of the range</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>Execute the code block if remaining item in list</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (for)</label>
+      <position>1-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The source sequence</label>
+      <position>1-1</position>
+      <colrange>13-25</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>An item picked from sequence</label>
+      <position>1-1</position>
+      <colrange>4-25</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Range traversal</label>
+      <position>1-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print every item in a range</label>
+      <position>1-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Create a range of integers</label>
+      <position>1-1</position>
+      <colrange>13-25</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The exclusive end of range</label>
+      <position>1-1</position>
+      <colrange>22-24</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The inclusive start of range</label>
+      <position>1-1</position>
+      <colrange>19-20</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The step size of range</label>
+      <position>1-1</position>
+      <colrange>19-20</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute if remaining item in list</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

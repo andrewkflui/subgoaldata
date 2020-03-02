@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Print every characeter in a string</title>
+  <program>
+
+for value in "String":
+    print(value)
+
+
+
+  </program>
+  <description>Print every characeter in a string with for iteration</description>
+  <topics>
+    <topic>for</topic>
+    <topic>loop</topic>
+    <topic>list</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>1-1</position>
+      <description>The sequence is a string</description>
+    </explain>
+    <explain>
+      <position>1-1</position>
+      <description>Each item in the sequence is assigned to the variable (value) one by one</description>
+    </explain>
+    <explain>
+      <position>1-2</position>
+      <description>Traverse through every character of a string and do something</description>
+    </explain>
+    <explain>
+      <position>1-2</position>
+      <description>Print every item in a string from the start to the end</description>
+    </explain>
+    <explain>
+      <position>1-1</position>
+      <description>Create a string</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>Execute the code block if remaining character in string</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (for)</label>
+      <position>1-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The source sequence</label>
+      <position>1-1</position>
+      <colrange>13-23</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>An item picked from sequence</label>
+      <position>1-1</position>
+      <colrange>4-21</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>String traversal</label>
+      <position>1-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print every item in a string</label>
+      <position>1-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Create a string</label>
+      <position>1-1</position>
+      <colrange>13-21</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute if remaining character in string</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

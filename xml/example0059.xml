@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Print a square of stars</title>
+  <program>
+size = int(input("Enter size of square: "))
+           
+y = 0
+while y < size:
+    x = 0
+    while x < size:
+        print('*', end='')
+        x += 1
+    print()    # print a newline
+    y += 1
+
+  </program>
+  <description>Print a star square of a given size.  A square of size of 5 looks like below.
+*****
+*****
+*****
+*****
+*****</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>nested</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-9</position>
+      <description>Two while structures, one nested within another one</description>
+    </explain>
+    <explain>
+      <position>4-7</position>
+      <description>The number of stars is determined from the input size. A counter-controlled loop based on counter x</description>
+    </explain>
+    <explain>
+      <position>2-9</position>
+      <description>The number of lines is determined from the input size. A counter-controlled loop based on counter y</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>No newline character is appended at the end</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>Nothing is added to the end of the output</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>5-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>3-9</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Nested structure</label>
+      <position>3-9</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print one line of stars</label>
+      <position>4-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Print a number of lines of stars</label>
+      <position>2-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Print one star</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Specify ending output</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Counter y controlled loop</label>
+      <position>2-9</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Counter x controlled loop</label>
+      <position>4-7</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

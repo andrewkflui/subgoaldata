@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Find minimum of 5 numbers</title>
+  <program>
+s1, s2, s3, s4, s5 = input("Enter five numbers: ").split()
+
+num1, num2, num3, num4, num5 = float(s1),float(s2),float(s3),float(s4),float(s5)
+
+minnum = num1       # assume num1 is minimum
+if num2 < minnum:
+    minnum = num2
+if num3 < minnum:
+    minnum = num3
+if num4 < minnum:
+    minnum = num4
+if num5 < minnum:
+    minnum = num5
+print("Minimum is", minnum)
+
+
+  </program>
+  <description>Print the smallest of five input numbers</description>
+  <topics>
+    <topic>if</topic>
+    <topic>input</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>0-0</position>
+      <description>Expects the input to be five numbers separated by space</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>The input string is split, using space as separators, into a list of strings</description>
+    </explain>
+    <explain>
+      <position>0-0</position>
+      <description>Five variables on the left hand side of the assignment operator will store five values on the right hand side, which can be a tuple or a list of 5 items.</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>Using simultaneous assignment</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>Assume that the first number is the smallest (so-far)</description>
+    </explain>
+    <explain>
+      <position>5-6</position>
+      <description>The largest is stored in maxnum</description>
+    </explain>
+    <explain>
+      <position>7-8</position>
+      <description>The largest is stored in maxnum</description>
+    </explain>
+    <explain>
+      <position>9-10</position>
+      <description>The largest is stored in maxnum</description>
+    </explain>
+    <explain>
+      <position>11-12</position>
+      <description>The largest is stored in maxnum</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Input data</label>
+      <position>0-0</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Split input into list of strings</label>
+      <position>0-0</position>
+      <colrange>50-58</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Simultaneous assignment</label>
+      <position>0-0</position>
+      <colrange>0-20</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>String-to-number</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>5-6</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Output data</label>
+      <position>13-13</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>7-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Assume the first as smallest</label>
+      <position>6-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update smallest of first 2 numbers</label>
+      <position>5-6</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update smallest of 3 numbers</label>
+      <position>7-8</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>9-10</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure (1-way)</label>
+      <position>11-12</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Update smallest of 4 numbers</label>
+      <position>9-10</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Update smallest of 5 numbers</label>
+      <position>11-12</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

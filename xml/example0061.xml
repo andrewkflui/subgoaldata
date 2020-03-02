@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Print a checkerboard of digits</title>
+  <program>
+size = int(input("Enter size of square: "))
+           
+y = 0
+while y < size:
+    x = 0
+    while x < size:
+        if (x + y) % 2 == 0:
+            print( (x+y) % 10, end='')
+        else:
+            print(' ', end='')     # print a space when x + y is an odd number
+        x += 1
+    print()    # print a newline
+    y += 1
+
+  </program>
+  <description>Print a square checkerboard of digits of a given size.  A square of size of 5 looks like below.
+0 2 4
+ 2 4
+2 4 6
+ 4 6 
+4 6 8</description>
+  <topics>
+    <topic>while</topic>
+    <topic>loop</topic>
+    <topic>nested</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-12</position>
+      <description>Two while structures, one nested within another one</description>
+    </explain>
+    <explain>
+      <position>4-10</position>
+      <description>The number of digits is determined from the input size. A counter-controlled loop based on counter x</description>
+    </explain>
+    <explain>
+      <position>2-12</position>
+      <description>The number of lines is determined from the input size. A counter-controlled loop based on counter y</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>No character is appended at the end</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>Nothing is added to the end of the output</description>
+    </explain>
+    <explain>
+      <position>7-7</position>
+      <description>The sum of x and y may be 10 or larger, making the output double digits and disrupt the shape</description>
+    </explain>
+    <explain>
+      <position>9-9</position>
+      <description>No character is appended at the end</description>
+    </explain>
+    <explain>
+      <position>9-9</position>
+      <description>Nothing is added to the end of the output</description>
+    </explain>
+    <explain>
+      <position>6-6</position>
+      <description>When the sum of x and y is an even number, print digit, and if otherwise print a space</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>5-10</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Repetition structure (while)</label>
+      <position>3-12</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Nested structure</label>
+      <position>3-12</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print one line of digits</label>
+      <position>4-10</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Print a number of lines of digits</label>
+      <position>2-12</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Print one digit</label>
+      <position>7-7</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Specify ending output</label>
+      <position>7-7</position>
+      <colrange>31-37</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Counter y controlled loop</label>
+      <position>2-12</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Counter x controlled loop</label>
+      <position>4-10</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Ensure single digit is printed</label>
+      <position>7-7</position>
+      <colrange>19-29</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print one space</label>
+      <position>9-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Specify ending output</label>
+      <position>9-9</position>
+      <colrange>23-29</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print digit or space conditionally</label>
+      <position>6-9</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>The condition for what to print</label>
+      <position>6-6</position>
+      <colrange>11-27</colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

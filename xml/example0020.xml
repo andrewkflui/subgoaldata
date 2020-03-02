@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Input Testing</title>
+  <program>
+num = int(input("Enter an even number: "))
+
+result = num % 2 == 0
+
+if result:
+    print("Yes, you entered an even number")
+
+if result and num >= 0:
+    print("We checked again and it was a positive even number")
+
+  </program>
+  <description>Prints messages if the input is an even number or a positive even number</description>
+  <topics>
+    <topic>if</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>4-5</position>
+      <description>Print a message if the input is an even number</description>
+    </explain>
+    <explain>
+      <position>5-5</position>
+      <description>This code block, defined by aligned indentation, is executed if the condition is true</description>
+    </explain>
+    <explain>
+      <position>4-5</position>
+      <description>An one-way if structure that execute conditionally</description>
+    </explain>
+    <explain>
+      <position>0-2</position>
+      <description>This code is always executed</description>
+    </explain>
+    <explain>
+      <position>7-8</position>
+      <description>Print a message if the input is an even number and a positive number</description>
+    </explain>
+    <explain>
+      <position>7-8</position>
+      <description>An one-way if structure that execute conditionally</description>
+    </explain>
+    <explain>
+      <position>2-2</position>
+      <description>The boolean variable result stores the result of testing the even-ness of the input variable num</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Print if even number</label>
+      <position>4-5</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Executed if true condition</label>
+      <position>5-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure</label>
+      <position>4-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Before selection structure</label>
+      <position>0-2</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print if even and positive number</label>
+      <position>7-8</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Selection structure</label>
+      <position>7-8</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Evaluate even-ness of input</label>
+      <position>2-2</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+  </subgoals>
+  </example>
+

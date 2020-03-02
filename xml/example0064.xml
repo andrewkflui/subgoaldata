@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<example>
+  <title>Print every item in a list</title>
+  <program>
+
+primeList = [2, 3, 5, 7, 11, 13, 17, 19]
+
+for value in primeList:
+    print(value)
+
+
+  </program>
+  <description>Print every item in a list with for iteration</description>
+  <topics>
+    <topic>for</topic>
+    <topic>loop</topic>
+    <topic>list</topic>
+  </topics>
+  <explanations>
+    <explain>
+      <position>3-3</position>
+      <description>The sequence is a list</description>
+    </explain>
+    <explain>
+      <position>3-3</position>
+      <description>Each item in the sequence is assigned to the variable (value) one by one</description>
+    </explain>
+    <explain>
+      <position>3-4</position>
+      <description>Traverse through every item of a list and do something</description>
+    </explain>
+    <explain>
+      <position>3-4</position>
+      <description>Print every item in a list from the start to the end</description>
+    </explain>
+    <explain>
+      <position>1-1</position>
+      <description>Create a list and initialize with some numbers</description>
+    </explain>
+    <explain>
+      <position>1-1</position>
+      <description>Store reference ID of the list to the variable (primeList)</description>
+    </explain>
+    <explain>
+      <position>4-4</position>
+      <description>Execute the code block if there is one or more remaining items in sequence</description>
+    </explain>
+  </explanations>
+  <subgoals>
+    <subgoal>
+      <label>Repetition structure (for)</label>
+      <position>3-5</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>The source sequence</label>
+      <position>3-3</position>
+      <colrange>13-22</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>An item picked from sequence</label>
+      <position>3-3</position>
+      <colrange>4-22</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>List traversal</label>
+      <position>3-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Print every item in a list</label>
+      <position>3-4</position>
+      <colrange></colrange>
+      <type>_abstraction</type>
+    </subgoal>
+    <subgoal>
+      <label>Create a list and initialize</label>
+      <position>1-1</position>
+      <colrange>12-40</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Store reference ID of the list</label>
+      <position>1-1</position>
+      <colrange>0-12</colrange>
+      <type>_automation</type>
+    </subgoal>
+    <subgoal>
+      <label>Execute if remaining item in sequence</label>
+      <position>4-4</position>
+      <colrange></colrange>
+      <type>_automation</type>
+    </subgoal>
+  </subgoals>
+  </example>
+
